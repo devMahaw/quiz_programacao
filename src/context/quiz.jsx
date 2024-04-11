@@ -13,7 +13,10 @@ const quizReducer = (state, action) => {
 
   switch (action.type) {
     case "CHANGE_STATE":
-      return state;
+      return {
+        ...state,
+        gameStage: STAGES[1],
+      };
 
     default:
       return state;
@@ -22,7 +25,6 @@ const quizReducer = (state, action) => {
 
 export const QuizContext = createContext();
 
-// eslint-disable-next-line react/prop-types
 export const QuizProvider = ({ children }) => {
   const value = useReducer(quizReducer, initialState);
 
