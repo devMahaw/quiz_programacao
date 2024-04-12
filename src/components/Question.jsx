@@ -7,7 +7,11 @@ const Question = () => {
 
   console.log(quizState);
 
-  return <div>Question</div>;
+  return (
+    <div>
+      <p>Pergunta 0 de 10</p>
+    </div>
+  );
 };
 
 export default Question;
